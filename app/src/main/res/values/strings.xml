@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="retry">retry now</string>
+    <string name="no_internet_connection_error">No Internet Connection</string>
+    <string name="someting_wrong">Something Error</string>
+    <string name="server_error">server error</string>
+    <string name="required">Required</string>
+    <string name="cancel">Cancel</string>
+    <string name="network_time_out">Time out</string>
+    <string name="unAuthentication">"unAuthorized "</string>
+    <string name="io_exception">"some thing wrong "</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="click_to_add_new">Click To Add New</string>
+</resources>

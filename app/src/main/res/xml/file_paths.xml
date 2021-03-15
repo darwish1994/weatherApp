@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="my_images"
+        path="/" />
+    <!--
+            <external-files-path name="my_images" path="Android/data/com.awfar.elezaby/files/Pictures/" />
+    -->
+    <external-files-path
+        name="Pictures"
+        path="Android/data/com.robustastudio.weather/files/" />
+
+</paths>
