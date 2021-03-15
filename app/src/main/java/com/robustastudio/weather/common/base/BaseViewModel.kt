@@ -2,8 +2,8 @@ package com.robustastudio.weather.common.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.arg.awfar.chat.agent.network.IViewState
-import com.arg.awfar.chat.agent.network.Result
+import com.robustastudio.weather.common.network.IViewState
+import com.robustastudio.weather.common.network.Result
 import com.robustastudio.weather.common.network.RetrofitException
 import com.robustastudio.weather.R
 import com.robustastudio.weather.common.network.ResponseInterceptor

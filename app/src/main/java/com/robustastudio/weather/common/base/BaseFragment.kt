@@ -34,6 +34,7 @@ abstract class BaseFragment<VB : ViewBinding>() : Fragment() {
     }
 
     abstract fun initClick()
+
     abstract fun getViewBinding(): VB?
 
     override fun onDestroyView() {

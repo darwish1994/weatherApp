@@ -1,6 +1,7 @@
 package com.robustastudio.weather.common.network
 
 
+import com.robustastudio.weather.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
@@ -29,6 +30,7 @@ class ResponseInterceptor @Inject constructor(private val networkHelper: Network
 
     private fun getRequestQueries(request: Request) = request.url
         .newBuilder()
+        .addQueryParameter("appid",BuildConfig.API_KEY)
         .build()
 
     inner class NoInternetConnection() : IOException() {

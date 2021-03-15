@@ -1,6 +1,4 @@
-package com.arg.awfar.chat.agent.network
-
-import com.robustastudio.weather.common.network.RetrofitException
+package com.robustastudio.weather.common.network
 
 
 interface IViewState<T> {

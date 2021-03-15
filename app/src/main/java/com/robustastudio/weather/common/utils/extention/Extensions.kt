@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.robustastudio.weather.R
 import com.robustastudio.weather.common.base.BaseActivity
@@ -54,7 +55,11 @@ fun FragmentActivity.hideKeypad(baseActivity: BaseActivity<*>) {
 
 }
 
-fun ImageView.loadFrom(url:String){
+fun Fragment.showSuccessMessage(msg: String) {
+    Toasty.success(this.requireContext(), msg, Toasty.LENGTH_SHORT).show()
+}
+
+fun ImageView.loadFrom(url: String) {
     this.setImageURI(Uri.parse(url))
 }
 
