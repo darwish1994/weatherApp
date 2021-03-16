@@ -10,4 +10,18 @@
         name="Pictures"
         path="Android/data/com.robustastudio.weather/files/" />
 
+
+    <external-cache-path
+        name="external_files"
+        path="my_images/" />
+
+    <external-path
+        name="external_files"
+        path="." />
+    <cache-path
+        name="my_cache"
+        path="." />
+
+
+
 </paths>

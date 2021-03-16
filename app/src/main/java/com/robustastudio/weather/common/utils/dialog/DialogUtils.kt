@@ -1,8 +1,11 @@
 package com.robustastudio.weather.common.utils.dialog
 
 import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ProgressBar
@@ -16,15 +19,18 @@ object DialogUtils {
 
     fun showGenericErrorPopup(
         context: Context,
-
         retryListener: () -> Unit,
         cancelListener: () -> Unit?,
         isCancelable: Boolean,
         message: String? = null,
-        view: PopupErrorBinding = PopupErrorBinding.inflate(LayoutInflater.from(context),null,false)
+        view: PopupErrorBinding = PopupErrorBinding.inflate(
+            LayoutInflater.from(context),
+            null,
+            false
+        )
 
 
-        ): AlertDialog {
+    ): AlertDialog {
 
         val alertDialog = AlertDialog.Builder(context).apply {
             setView(view.root)
@@ -73,9 +79,22 @@ object DialogUtils {
             }
 
 
+    fun showEnableLocation(context: Context): AlertDialog {
+        val alertDialog = AlertDialog.Builder(context).apply {
+            setTitle(R.string.please_enable_location)
+            setMessage(R.string.enable_GPS_from_setting)
+            setCancelable(false)
+        }.create()
+        alertDialog.apply {
+            setButton(DialogInterface.BUTTON_POSITIVE, "ok") { c, cc ->
+                context.startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+                c.dismiss()
+            }
 
+        }.show()
 
-
+        return alertDialog
+    }
 
 
 }

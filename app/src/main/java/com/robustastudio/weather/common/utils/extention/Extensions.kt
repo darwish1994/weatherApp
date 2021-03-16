@@ -6,6 +6,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import com.bumptech.glide.Glide
 import com.robustastudio.weather.R
 import com.robustastudio.weather.common.base.BaseActivity
 import es.dmoral.toasty.Toasty
@@ -58,8 +59,11 @@ fun FragmentActivity.hideKeypad(baseActivity: BaseActivity<*>) {
 fun Fragment.showSuccessMessage(msg: String) {
     Toasty.success(this.requireContext(), msg, Toasty.LENGTH_SHORT).show()
 }
+fun Fragment.showErrorMessage(msg: String) {
+    Toasty.error(this.requireContext(), msg, Toasty.LENGTH_SHORT).show()
+}
 
 fun ImageView.loadFrom(url: String) {
-    this.setImageURI(Uri.parse(url))
+    Glide.with(this).load(url).into(this)
 }
 

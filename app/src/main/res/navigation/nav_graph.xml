@@ -7,12 +7,17 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.robustastudio.weather.main.MainFragment"
+        android:name="com.robustastudio.weather.main.temp_history.TempHistoryFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_addNewTemperateFragment"
-            app:destination="@id/addNewTemperateFragment" />
+            app:destination="@id/addNewTemperateFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/addNewTemperateFragment"
